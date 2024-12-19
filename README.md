@@ -1,0 +1,1 @@
+projeto de automação de testes de softwares, usando cypress, com o objetivo de aprender melhores práticas com notas descritivas (versões basicas e refinadas do codigo). 
