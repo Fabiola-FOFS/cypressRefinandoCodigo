@@ -1,4 +1,3 @@
-import userData from '../fixtures/userData.json'
 describe('Orange HRM teste automatizado', () => {
  
   const selectorsList = {
@@ -9,7 +8,17 @@ describe('Orange HRM teste automatizado', () => {
     dashboardGrid:'.orangehrm-dashboard-grid',
     wrongcredentialAlert: "[role='alert']",
   }
-
+/* uso de object para tornar o código mais potente contra alterações do site */
+  const userData = {
+    userSuccess: {
+    username: "admin",
+    password: "admin123"
+  },
+  userFail: {
+    username: "test",
+    password: "test"
+  }
+}/* uso de "dados" para abstrair o codigo assim posso reutilizar o codigo mesmo que os dados se alterem */
   it('login - Sucess', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get(selectorsList.usernameField).type(userData.userSuccess.username)
@@ -25,6 +34,5 @@ describe('Orange HRM teste automatizado', () => {
     cy.get(selectorsList.loginButton).click()
     cy.get(selectorsList.wrongcredentialAlert)
 })
-})
 
-// importante abstrair o codigo para tornar o codigo blindado e reutilizável 
+// agora vou usar as fixtures do cypress para o codigo ficar compacto e bem delimitado
