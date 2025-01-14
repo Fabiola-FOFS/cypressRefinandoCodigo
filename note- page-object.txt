@@ -1,0 +1,7 @@
+Page objects : é uma arquitetura de software -
+serve para organizar o projeto de forma simples para que qualquer um entenda 
+
+1. criar uma pasta pages - arquivo Js (para cada parte a ser testada, ficar claro a que parte do software pertence cada elemento)
+2. colocar todos os dados de acesso de derterminado feature
+3. isso é feito através de funções, que precisam ser genericas para que sempre possam ser reutilizadas
+4. coloco os dados mutaveis na pagina de passo a passo e deixo as funções neutras pra ser usado mesmo que os dados mudem
