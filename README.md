@@ -14,4 +14,4 @@ npx cypress run
 https://opensource-demo.orangehrmlive.com/ 
 
 # Portuguese: 
-projeto de automação de testes de softwares, usando cypress, com o objetivo de aprender melhores práticas com notas descritivas (versões basicas do código em notas txt, acompanhe o refinamento do codigo). 
+projeto de automação de teste de software, o teste utilizado é 2e2 e automatiza alguns casos de teste de loguin e inserção de dados básicos,  usando cypress. 
