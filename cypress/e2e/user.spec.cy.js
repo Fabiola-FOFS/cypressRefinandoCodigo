@@ -4,6 +4,7 @@ import DashboardPage  from '../pages/dashboardPage.js'
 import menuPage from '../pages/menuPage.js'   
 import myInfoPage from '../pages/myInfoPage.js'
 
+const Chance = require('chance')
 
 const loginPage = new LoginPage()
 const dashboardPage = new DashboardPage()
@@ -26,8 +27,8 @@ describe('Orange HRM teste automatizado', () => {
     dashboardPage.checkDashboardPage()
 
     MenuPage.accessMyInfo()
-    
-    MyInfoPage.fillPersonalDetails('first name', 'middle name', 'last name')
+
+    MyInfoPage.fillPersonalDetails(chance.first(), chance.string(), chance.last())
     MyInfoPage.fillEmployeeDetails('123456', '789456', '147852', '2025-07-09','123656', '147852')
     MyInfoPage.fillStatussDetails()
     MyInfoPage.saveForm()

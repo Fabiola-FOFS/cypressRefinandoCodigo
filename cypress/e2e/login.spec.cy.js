@@ -7,7 +7,7 @@ const DashboardPage = new dashboardPage()
 
 describe('Login Orange HRM teste automatizado', () => {
   
-  it.only('login - fail', () => {
+  it('login - fail', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithtUser(userData.userFail.username, userData.userFail.password)
     loginPage.checkAccesInvalid()
@@ -15,7 +15,7 @@ describe('Login Orange HRM teste automatizado', () => {
 })
 it('login Success',() =>
 { loginPage.accessLoginPage()
-  loginPage.loginWithtUser(userData.userSucces.username, userData.userSucces.password)
-  dashboardPage.checkDashboardPage()
+  loginPage.loginWithtUser(userData.userSuccess.username, userData.userSuccess.password)
+  DashboardPage.checkDashboardPage()
 })
 })
