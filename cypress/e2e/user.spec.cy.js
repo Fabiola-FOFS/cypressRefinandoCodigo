@@ -6,6 +6,7 @@ import myInfoPage from '../pages/myInfoPage.js'
 
 const Chance = require('chance')
 
+const chance = new Chance()
 const loginPage = new LoginPage()
 const dashboardPage = new DashboardPage()
 const MenuPage = new menuPage()
@@ -14,11 +15,6 @@ const MyInfoPage = new myInfoPage()
 
 describe('Orange HRM teste automatizado', () => {
  
-
-     const selectorsList = {
-    
-    
-  }
 
   it('User Info Update - Sucess', () => {
     loginPage.accessLoginPage()
@@ -29,7 +25,7 @@ describe('Orange HRM teste automatizado', () => {
     MenuPage.accessMyInfo()
 
     MyInfoPage.fillPersonalDetails(chance.first(), chance.string(), chance.last())
-    MyInfoPage.fillEmployeeDetails(chance.integer({ min: 6, max: 6 }), chance.natural({ min: 6, max: 6 }), chance.natural({ min: 0, max: 6 }), chance.date({string: true}),'123656', '147852')
+    MyInfoPage.fillEmployeeDetails('123654', '829638', '582147', '2024-06-02','123656', '147852')
     MyInfoPage.fillStatussDetails()
     MyInfoPage.saveForm()
   })

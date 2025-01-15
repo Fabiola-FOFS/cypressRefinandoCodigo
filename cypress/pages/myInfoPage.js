@@ -11,7 +11,7 @@ class myInfoPage {
     secondItemCombobox: ".oxd-select-dropdown > :nth-child(2)",
     thirdItemCombobox: ".oxd-select-dropdown > :nth-child(3)", 
     dateCloseButton: '.--close',
-    submitButton:".orangehrm-left-space",
+    submitButton: ".orangehrm-left-space",
     //gender: "cy.get(':nth-child(2) > :nth-child(2) > .oxd-radio-wrapper > label')",
 
     } 
