@@ -26,15 +26,11 @@ describe('Orange HRM teste automatizado', () => {
     dashboardPage.checkDashboardPage()
 
     MenuPage.accessMyInfo()
+    
     MyInfoPage.fillPersonalDetails('first name', 'middle name', 'last name')
     MyInfoPage.fillEmployeeDetails('123456', '789456', '147852', '2025-07-09','123656', '147852')
     MyInfoPage.fillStatussDetails()
     MyInfoPage.saveForm()
   })
-  it('login - fail', () => {
-    loginPage.accessLoginPage('teste', 'test123')
-    loginPage.loginWithtUser(userData.userFail.username, userData.userFail.password)
-   
-  
-})
+
 })

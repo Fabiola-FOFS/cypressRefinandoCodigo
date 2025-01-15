@@ -4,7 +4,7 @@ selectorsList () {
         usernameField: "[name='username']", 
         passwordField: "[name='password']",
         loginButton: "[type='submit']",
-        wrongcredentialAlert: "[role='alert']",
+        wrongcredentialAlert: '.oxd-alert-content',
     }
 
     return selectors
@@ -19,7 +19,7 @@ selectorsList () {
     cy.get(this.selectorsList().loginButton).click()
  }
  checkAccesInvalid() {
-    cy.get(this.selectorsList.wrongcredentialAlert)
+    cy.get(this.selectorsList().wrongcredentialAlert)
  }
 }
 export default loginPage
